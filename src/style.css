@@ -5,10 +5,39 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 80px; /* ensures anchor scroll doesn’t hide behind navbar */
+  -webkit-overflow-scrolling: touch; /* smoother scroll on iOS and mobile browsers */
   font-size: 100%;
 }
+body {
+  overflow-x: hidden !important;
+  overscroll-behavior-y: contain; /* prevents elastic bounce in Chrome/Android */
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none;
+  transition: scroll 0.3s ease-in-out;
+}
+section {
+  scroll-margin-top: 90px; /* prevents section titles hiding under navbar */
+}
+
 @media (max-width: 768px) {
+  html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 80px; /* ensures anchor scroll doesn’t hide behind navbar */
+  -webkit-overflow-scrolling: touch; /* smoother scroll on iOS and mobile browsers */
+  font-size: 100%;
+}
+body {
+  overflow-x: hidden !important;
+  overscroll-behavior-y: contain; /* prevents elastic bounce in Chrome/Android */
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none;
+  transition: scroll 0.3s ease-in-out;
+}
+section {
+  scroll-margin-top: 90px; /* prevents section titles hiding under navbar */
+}
    html, body {
     width: 100%;
     overflow-x: hidden; /* remove unwanted horizontal scroll */
@@ -502,6 +531,22 @@ body {
 }
 /* Responsive Navbar & Layout */
 @media (max-width: 991px) {
+  html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 80px; /* ensures anchor scroll doesn’t hide behind navbar */
+  -webkit-overflow-scrolling: touch; /* smoother scroll on iOS and mobile browsers */
+  font-size: 100%;
+}
+body {
+  overflow-x: hidden !important;
+  overscroll-behavior-y: contain; /* prevents elastic bounce in Chrome/Android */
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none;
+  transition: scroll 0.3s ease-in-out;
+}
+section {
+  scroll-margin-top: 90px; /* prevents section titles hiding under navbar */
+}
   .hero {
     flex-direction: column;
     text-align: center;
@@ -665,6 +710,22 @@ body {
 }
 /* small screens tweaks */
 @media (max-width: 480px) {
+  html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 80px; /* ensures anchor scroll doesn’t hide behind navbar */
+  -webkit-overflow-scrolling: touch; /* smoother scroll on iOS and mobile browsers */
+  font-size: 100%;
+}
+body {
+  overflow-x: hidden !important;
+  overscroll-behavior-y: contain; /* prevents elastic bounce in Chrome/Android */
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none;
+  transition: scroll 0.3s ease-in-out;
+}
+section {
+  scroll-margin-top: 90px; /* prevents section titles hiding under navbar */
+}
   .modal-content {
     width: 98%;
     padding: 12px;
@@ -710,6 +771,7 @@ body {
     font-size: 5.95rem;
     color: #444;
     padding: 0 6%;
+    margin: 1.5rem 0;
   }
   .buttons {
     justify-content: center;
@@ -718,9 +780,9 @@ body {
    .hero {
     gap: 0;
   }
-   .hero-left h1,
-  .hero-left p {
+   .hero-left h1 {
     margin: 2.5rem 0;   /* reduce vertical spacing */
+   
   }
 }
 
