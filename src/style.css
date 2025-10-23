@@ -61,7 +61,7 @@ html {
     padding: 0 5%;
   }
     .hero-left p {
-    font-size: 0.95rem;
+    font-size: 5.95rem;
     color: #444;
     padding: 0 6%;
   }
@@ -74,7 +74,7 @@ html {
   }
    .hero-left h1,
   .hero-left p {
-    margin: 0.5rem 0;   /* reduce vertical spacing */
+    margin: 2.5rem 0;   /* reduce vertical spacing */
   }
   /* ensure hero-left is tightly centered */
   .hero-left {
@@ -690,6 +690,37 @@ body {
   .buttons .btn {
     width: 80%;
     padding: 10px 0;
+  }
+  /* make left side take full width and center text/buttons */
+  .hero-left {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .hero-left h1 {
+    font-size: clamp(1.3rem, 5vw, 1.9rem);
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding: 0 5%;
+  }
+    .hero-left p {
+    font-size: 5.95rem;
+    color: #444;
+    padding: 0 6%;
+  }
+  .buttons {
+    justify-content: center;
+    padding-top: 62px;
+  }
+   .hero {
+    gap: 0;
+  }
+   .hero-left h1,
+  .hero-left p {
+    margin: 2.5rem 0;   /* reduce vertical spacing */
   }
 }
 
