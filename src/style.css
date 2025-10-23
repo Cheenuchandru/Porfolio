@@ -9,25 +9,41 @@ html {
   font-size: 100%;
 }
 @media (max-width: 768px) {
+   html, body {
+    width: 100%;
+    overflow-x: hidden; /* remove unwanted horizontal scroll */
+  }
   html {
     font-size: 90%;
   }
   .buttons{
     padding:0% 17%;
   }
-  .hero{
+  /* .hero{
     padding-top: 200%;
-  }
+  } */
 }
 @media (max-width: 768px) {
   /* remove that problematic huge padding if present */
   .hero {
-    padding: 40px 5%;        /* reasonable mobile padding */
-    min-height: auto;        /* allow content height to flow */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 6% 40px;
+    gap: 1.5rem;
+    min-height: auto;
+    width: 100%;
   }
   /* hide the right side (photo) completely */
   .hero-right { 
     display: none !important;
+  }
+  
+  .hero-left .tagline {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
   }
   /* make left side take full width and center text/buttons */
   .hero-left {
@@ -39,8 +55,15 @@ html {
     margin: 0 auto;
   }
   .hero-left h1 {
-    font-size: clamp(1.6rem, 4.5vw, 2rem); /* scale down on mobile */
-    line-height: 1.8;
+    font-size: clamp(1.3rem, 5vw, 1.9rem);
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding: 0 5%;
+  }
+    .hero-left p {
+    font-size: 0.95rem;
+    color: #444;
+    padding: 0 6%;
   }
   .buttons {
     justify-content: center;
@@ -57,6 +80,17 @@ html {
   .hero-left {
     margin: 0 auto;
     padding: 0;
+  }
+    .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two per row */
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .skill-card {
+    width: 90%; /* keep spacing neat */
+    max-width: 160px;
   }
 }
 body {
@@ -637,6 +671,25 @@ body {
   }
   .modal-content iframe {
     height: 60vh;
+  }
+    .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 18px 10px;
+  }
+    .hero-left h1 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .hero-left p {
+    font-size: 0.9rem;
+  }
+  .buttons .btn {
+    width: 80%;
+    padding: 10px 0;
   }
 }
 
