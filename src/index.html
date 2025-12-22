@@ -57,7 +57,7 @@
                     <p style="text-align: justify;">
                         I'm Chandru C, a frontend developer from Tamil Nadu.
                         I enjoy building responsive and user-friendly websites.
-                        Skilled in Java, C/C++, HTML, CSS with hands-on project experience.
+                        Skilled in Java, C/C++, JS, HTML, CSS, Tools - React, Bootstrap, NodeJS, MongoDB with hands-on project experience.
                         Created a fashion e-commerce site, personal portfolio,Static Website.
                         I am passionate about Deesign and Development.
                         Looking to grow in a tech-driven team and learn more every day.
@@ -88,32 +88,32 @@
             <div class="skill-card">
                 <img src="java.webp" class="skill-icon" alt="Java" />
                 <h4>Java</h4>
-                <div class="level-label">80%</div>
-            </div>
-             <div class="skill-card">
-                <img src="c.webp" class="skill-icon" alt="C" />
-                <h4>C</h4>
-                <div class="level-label">70%</div>
+                <!-- <div class="level-label">80%</div> -->
             </div>
             <div class="skill-card">
                 <img src="C++.webp" class="skill-icon" alt="C++" />
                 <h4>C++</h4>
-                <div class="level-label">75%</div>
-            </div>
-            <div class="skill-card">
-                <img src="html (2).png" class="skill-icon" alt="HTML" />
-                <h4>HTML</h4>
-                <div class="level-label">85%</div>
-            </div>
-            <div class="skill-card">
-                <img src="css.png" class="skill-icon" alt="CSS" />
-                <h4>CSS</h4>
-                <div class="level-label">73%</div>
+                <!-- <div class="level-label">75%</div> -->
             </div>
             <div class="skill-card">
                 <img src="react.png" class="skill-icon" alt="react" />
                 <h4>React</h4>
-                <div class="level-label">50%</div>
+                <!-- <div class="level-label">50%</div> -->
+            </div>
+            <div class="skill-card">
+                <img src="bootstrap.png" class="skill-icon" alt="Bootstrap" />
+                <h4>Bootstrap</h4>
+                <!-- <div class="level-label">85%</div> -->
+            </div>
+            <div class="skill-card">
+                <img src="node.png" class="skill-icon" alt="NodeJS" />
+                <h4>NodeJS</h4>
+                <!-- <div class="level-label">73%</div> -->
+            </div>
+            <div class="skill-card">
+                <img src="mongo.png" class="skill-icon" alt="MongoDB" />
+                <h4>MongoDB</h4>
+                <!-- <div class="level-label">73%</div> -->
             </div>
         </div>
         <!-- Project card -->
@@ -176,13 +176,13 @@
       </div>
        <h2 class="section-title" style="color: black;padding-top: 5%;">Freelance</h2>
             <div class="experience-item">
-        <h3><u>Static Business Website</u></h3>
+          <a href="https://moreh-information-technology.onrender.com/"  target="_blank"><h3><u>Static Business Website</u></h3></a>
         <p><strong>Moreh Information Technology</strong> | Jun 2025 – Jul 2025</p>
         <p>Developed a static business website to showcase the company’s IT services <br>using <strong>HTML5, Tailwind CSS,</strong> and <strong>JavaScript.</strong></p>
       </div>
 
       <div class="experience-item">
-        <h3><u>Company Website</u></h3>
+        <a href="https://jesus-technology-services.onrender.com" target="_blank"><h3><u>Company Website</u></h3></a>
         <p><strong>Jesus Technology Services</strong> | Sep 2025 – Nov 2025</p>
         <p>Created a company website to highlight products and services , focusing on responsive<br> design and clean UI using <strong>HTML5, Tailwind CSS, JavaScript,</strong> and <strong>Bootstrap</strong>.</p>
       </div>
@@ -290,7 +290,7 @@ ScrollReveal().reveal('.experience-section', {
       <p> Static business website developed for a startup company (Moreh Information Technology) to showcase IT services.</p>
       <img src="22.png" width='300' alt="Moreh Info">
       <p>Built using HTML, CSS, and JS.</p>
-      <a href="https://github.com/Cheenuchandru/Moreh-Information-Technology.git" target="_blank">GitHub</a>
+      <a href="https://github.com/Cheenuchandru/Moreh-Information-Technology.git" target="_blank">View Repo</a>
     </body></html>
   `;
     const content4 = `
@@ -304,7 +304,7 @@ ScrollReveal().reveal('.experience-section', {
       <p> Business website developed for a startup company (Jesus Technology Services) to showcase IT services.</p>
       <img src="33.png" width='300' alt="jesus">
       <p>Built using HTML, CSS, and JS.</p>
-      <a href="https://github.com/Cheenuchandru/Jesus-Technology-Services.git" target="_blank">GitHub</a>
+      <a href="https://github.com/Cheenuchandru/Jesus-Technology-Services.git" target="_blank">View Repo</a>
     </body></html>
   `;
   // wire buttons
@@ -342,6 +342,14 @@ ScrollReveal().reveal('.experience-section', {
         if (window.innerWidth > 991) navLinks.classList.remove('open');
     });
 })();
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
 </script>
 </body>
 </html>
