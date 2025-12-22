@@ -127,7 +127,7 @@ body {
   background: #fff;
   color: #111;
   overflow-x: hidden;
-  padding-top: 80px;
+  padding-top: 45px;
 }
 /* Navbar */
 .navbar {
@@ -771,7 +771,7 @@ section {
     font-size: 5.95rem;
     color: #444;
     padding: 0 6%;
-    margin: 0.9rem 0;
+    margin: 1.5rem 0;
   }
   .buttons {
     justify-content: center;
